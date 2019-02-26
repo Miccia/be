@@ -1,0 +1,18 @@
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+	<deployment>
+		<dependencies>
+		
+			
+			<!-- similar to https://issues.jboss.org/browse/JDG-450 -->
+			<module name="org.hibernate.commons-annotations"></module>
+		</dependencies>
+		
+		<exclude-subsystems>
+    	
+	    	<!-- 
+	    		Wildfly abilita JSF in automatico anche se non usato
+	    	 -->
+	    	<subsystem name="jsf" />
+	    </exclude-subsystems>
+	</deployment>
+</jboss-deployment-structure>
